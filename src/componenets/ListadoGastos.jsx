@@ -2,7 +2,6 @@ import Gasto from "./Gasto";
 
 function ListadoGastos({
   gastos,
-  gastoEditar,
   setGastoEditar,
   eliminarGasto,
   gastosFiltrados,
@@ -22,7 +21,6 @@ function ListadoGastos({
             <Gasto
               key={gasto.id}
               gasto={gasto}
-              gastoEditar={gastoEditar}
               setGastoEditar={setGastoEditar}
               eliminarGasto={eliminarGasto}
             />
@@ -35,7 +33,6 @@ function ListadoGastos({
             <Gasto
               key={gasto.id}
               gasto={gasto}
-              gastoEditar={gastoEditar}
               setGastoEditar={setGastoEditar}
               eliminarGasto={eliminarGasto}
             />

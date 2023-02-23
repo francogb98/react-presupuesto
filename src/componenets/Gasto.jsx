@@ -27,20 +27,20 @@ const diccionarioIcons = {
   suscripciones: IconoSuscripciones,
 };
 
-function Gasto({ gasto, gastoEditar, setGastoEditar, eliminarGasto }) {
+function Gasto({ gasto, setGastoEditar, eliminarGasto }) {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction destructive={true} onClick={() => setGastoEditar(gasto)}>
-        {" "}
-        Editar
-      </SwipeAction>
+      <SwipeAction onClick={() => setGastoEditar(gasto)}> Editar</SwipeAction>
     </LeadingActions>
   );
   const trailingActions = () => (
     <TrailingActions>
-      <SwipeAction onClick={() => eliminarGasto(id)}> Eliminar</SwipeAction>
+      <SwipeAction destructive={true} onClick={() => eliminarGasto(id)}>
+        {" "}
+        Eliminar
+      </SwipeAction>
     </TrailingActions>
   );
 

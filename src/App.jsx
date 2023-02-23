@@ -60,7 +60,7 @@ function App() {
 
   const handleNuevoGasto = () => {
     setModal(true);
-    setGastoEditar("");
+    setGastoEditar({});
 
     setTimeout(() => {
       setAnimarModal(true);
@@ -113,7 +113,7 @@ function App() {
             <Filtros filtro={filtro} setFiltro={setFiltro} />
             <ListadoGastos
               gastos={gastos}
-              gastoEditar={gastoEditar}
+              setGastoEditar={setGastoEditar}
               eliminarGasto={eliminarGasto}
               gastosFiltrados={gastosFiltrados}
               filtro={filtro}
